@@ -1,0 +1,18 @@
+<h2> Consultar filme </h2>
+
+<div id="componenteConsulta">
+  <input type="number" name="id" [(ngModel)]="id" >
+  <button (click)="consultarFilme()">Consultar</button>
+</div>
+
+<div *ngIf="filme != null">
+  <label>Filme: {{filme.nome}}</label>
+  <br/>
+  <label>Genero: {{filme.genero}}</label>
+  <br/>
+  <label>Ano: {{filme.ano}}</label>
+  <br/>
+  <label>Nome do autor: {{filme.autor.nome}}</label>
+  <br/>
+  <label>Data de nascimento: {{filme.autor.dataNascimento}}</label>
+</div>
